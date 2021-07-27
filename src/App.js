@@ -51,14 +51,14 @@ const App: FC = () => {
   };
 
   return (
-    <div className="xs:min-w-full min-h-screen  xs:p-4 lg:min-w-0 lg:p-0 lg:max-w-screen-lg lg:m-auto">
+    <div className="xs:min-w-full min-h-screen  xs:p-4 lg:min-w-0 lg:p-0  ">
       <div className="flex flex-col lg:mr-4 lg:ml-4 mt-8 mb-8">
         <div className="flex items-center cursor-pointer gap-2 text-gray-500 font-semibold">
           <ArrowIcon />
           All products
         </div>
       </div>
-      <div className="flex xs:flex-col lg:flex-row">
+      <div className="flex xs:flex-col lg:flex-row lg:max-w-screen-lg lg:m-auto">
         <div className="flex flex-col gap-8 lg:w-full xs:w-full">
           <div className="flex flex-col gap w-full lg:ml-4 lg:mr-4">
             <span className="text-3xl font-bold">{product.name}</span>
@@ -71,7 +71,7 @@ const App: FC = () => {
                   <div
                     onClick={() => handleChangeTab(tab)}
                     key={tab}
-                    className={`text-semibold pl-0 font-semibold  pb-0  mr-4 flex uppercase justify-start p-4 cursor-pointer border-b-4  hover:border hover:border-solid hover:border-blue-400 ${
+                    className={`text-semibold font-semibold  pb-0  mr-4 flex uppercase justify-center p-4 cursor-pointer border-b-4  hover:border hover:border-solid hover:border-blue-400 ${
                       activeTab === tab
                         ? "border-blue-500"
                         : "border-white text-gray-400"
